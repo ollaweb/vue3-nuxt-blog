@@ -1,13 +1,10 @@
 <template>
-  <div class="wrapper-content">
-    <Intro title="My posts:"/>
-    <PostsList :posts="posts"/>
-  </div>
+  <PostsList :posts="posts"/>
 </template>
 
 <script>
-
 export default {
+  layout: 'admin',
   data() {
     return {
       posts: [

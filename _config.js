@@ -10,9 +10,9 @@ export const app = {
 }
 export const links = [
   {
-      title: "Home",
-      alias: "home",
-      url: "/",
+      title: "Blog",
+      alias: "blog",
+      url: "/blog",
   },
   {
       title: "About",

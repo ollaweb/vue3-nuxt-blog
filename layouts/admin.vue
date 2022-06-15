@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <Header/>
+    <div class="intro-wrapper">
+      <Intro title="Admin page">
+        <nuxt-link to="/admin" class="link isWhite">Admin</nuxt-link>
+      </Intro>
+    </div>
+    <Nuxt />
+  </div>
+</template>
+
+<script>
+import Header from '@/components/system/Header.vue'
+export default {
+  components: {Header}
+}
+</script>
+
+<style lang="scss">
+  .intro-wrapper {
+    margin-top: 80px;
+  }
+</style>
