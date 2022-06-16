@@ -4,6 +4,7 @@
     <div class="intro-wrapper">
       <Intro title="Admin page">
         <nuxt-link to="/admin" class="link isWhite">Admin</nuxt-link>
+        <nuxt-link to="/admin/new-post" class="link isWhite">New Post</nuxt-link>
       </Intro>
     </div>
     <Nuxt />

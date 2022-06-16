@@ -1,6 +1,9 @@
 .link {
   cursor: pointer;
   color: $purple-color;
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
   &:hover {
     text-decoration: underline;
     border-bottom: none;
@@ -8,6 +11,9 @@
   &.isWhite {
     border-bottom: 1px solid #ffffff;
     color: #ffffff;
+    &:hover {
+      text-decoration: none;
+    }
   }
   &.isFalse {
     border-bottom: 1px solid $danger-color;

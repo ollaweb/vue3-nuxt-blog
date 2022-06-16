@@ -5,7 +5,8 @@
         <PostPreview
           v-for="post in posts"
           :key="post.id"
-          :post="post"/>
+          :post="post"
+          :admin="admin"/>
       </div>
     </div>
   </section>
@@ -21,6 +22,10 @@ export default {
     posts: {
       type: Array,
       required: true
+    },
+    admin: {
+      type: Boolean,
+      default: false
     }
   }
 }
