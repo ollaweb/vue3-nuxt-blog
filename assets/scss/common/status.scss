@@ -1,6 +1,7 @@
 .status {
   margin-right: 10px;
   &:before {
+    margin-right: 10px;
     display: inline-block;
     content: '\A';
     width: 10px;
