@@ -33,6 +33,7 @@ export default {
 <style lang="scss">
   .post-preview {
     padding: 16px;
+    width: 100%;
     max-width: 33%;
     text-align: center;
   }
