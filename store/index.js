@@ -11,6 +11,10 @@ export const mutations = {
   addPost(state, post) {
     console.log(post)
     state.postsLoaded.push(post)
+  },
+  editPost(state, postEdit) {
+    const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
+    state.postsLoaded[postIndex] = postEdit
   }
 }
 
@@ -30,6 +34,13 @@ export const actions = {
     return axios.post('https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app//posts.json', post)
       .then(res => {
         commit('addPost',{...post, id:res.data.name})
+      })
+      .catch(e => console.log(e))
+  },
+  editPost({commit}, post) {
+    return axios.put(`https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app/posts/${post.id}.json`, post)
+      .then(res => {
+        commit('editPost', post)
       })
       .catch(e => console.log(e))
   }
