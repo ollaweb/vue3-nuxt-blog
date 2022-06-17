@@ -6,6 +6,7 @@
       :value="value"
       :type="type"
       :name="forName"
+      :required="required"
       @input="$emit('input', $event.target.value)">
   </div>
 </template>
@@ -23,6 +24,10 @@ export default {
     },
     forName: {
       type: String
+    },
+    required: {
+      type: Boolean,
+      default: true
     }
   }
 }

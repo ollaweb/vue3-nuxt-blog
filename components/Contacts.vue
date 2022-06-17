@@ -4,11 +4,11 @@
       <h2 class="title">Contact me!</h2>
       <form @submit.prevent="onSubmit" class="contact-form">
         <!-- name -->
-        <AppInput v-model="user.name" for="name">Name:</AppInput>
+        <AppInput v-model="user.name" forName="name">Name:</AppInput>
         <!-- email -->
-        <AppInput v-model="user.email" for="email" type="email">Email:</AppInput>
+        <AppInput v-model="user.email" forName="email" type="email">Email:</AppInput>
         <!-- text -->
-        <AppTextArea v-model="user.text" for="text">Text:</AppTextArea>
+        <AppTextArea v-model="user.text" forName="text">Text:</AppTextArea>
         <!-- buttons -->
         <div class="controls">
           <AppButton btnClass="btnWhite">Submit!</AppButton>
