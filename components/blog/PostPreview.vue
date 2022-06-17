@@ -34,8 +34,14 @@ export default {
   .post-preview {
     padding: 16px;
     width: 100%;
-    max-width: 33%;
+    max-width: 100%;
     text-align: center;
+    @media (min-width: 641px) {
+      max-width: 48%;
+    }
+    @media (min-width: 1028px) {
+      max-width: 33%;
+    }
   }
   .post-image {
     margin-bottom: 20px;
