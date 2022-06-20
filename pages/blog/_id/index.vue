@@ -24,12 +24,10 @@ export default {
       axios.get(`https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app/posts/${context.params.id}.json`),
       axios.get(`https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app/comments.json`)
     ])
-
   let postComments = Object
     .values(comments.data)
     .filter(comment =>
       (comment.postId === context.params.id) && comment.published)
-
     return {
       post: post.data,
       comments: postComments
