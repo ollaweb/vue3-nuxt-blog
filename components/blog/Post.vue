@@ -26,3 +26,25 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .post {
+    &__image {
+      display: flex;
+      align-items: center;
+      max-height: 320px;
+      overflow: hidden;
+      @media (min-width: 481px) {
+        max-height: 500px;
+      }
+      @media (min-width: 641px) {
+        max-height: 600px;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+</style>

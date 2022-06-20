@@ -1,6 +1,8 @@
 <template>
   <section class="new-comment">
     <div class="container">
+      <!-- message -->
+      <Message v-if="message" :message="message"/>
       <form @submit.prevent="onSubmit" class="contact-form">
         <AppInput v-model="comment.name" forName="name">Name:</AppInput>
         <AppTextArea v-model="comment.text" forName="text">Text:</AppTextArea>
@@ -15,8 +17,15 @@
 <script>
 
 export default {
+  props: {
+    postId: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
+      message: null,
       comment: {
         name: '',
         text: ''
@@ -25,7 +34,18 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log(this.comment)
+      this.$store.dispatch('addComment', {
+        postId: this.postId,
+        published: false,
+        ...this.comment
+      })
+        .then(()=> {
+          this.message = 'Submited'
+          //reset
+          this.comment.name = ''
+          this.comment.text = ''
+        })
+        .catch(e => console.log(e))
     }
   }
 }

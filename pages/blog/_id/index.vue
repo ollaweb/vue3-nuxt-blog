@@ -2,11 +2,13 @@
   <div class="wrapper-content">
     <Post :post="post"/>
     <Comments :comments="comments"/>
-    <NewComment/>
+    <NewComment :postId="$route.params.id"/>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 import Post from '@/components/blog/Post.vue'
 import NewComment from '@/components/comments/NewComment.vue'
 import Comments from '@/components/comments/Comments.vue'
@@ -17,25 +19,20 @@ export default {
     NewComment,
     Comments
   },
-  data() {
+  async asyncData(context) {
+    let [post, comments] = await Promise.all([
+      axios.get(`https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app/posts/${context.params.id}.json`),
+      axios.get(`https://nuxt-blog-1092b-default-rtdb.europe-west1.firebasedatabase.app/comments.json`)
+    ])
+
+  let postComments = Object
+    .values(comments.data)
+    .filter(comment =>
+      (comment.postId === context.params.id) && comment.published)
+
     return {
-      post: {
-        id: 1,
-        title: 'Carpet on the floor',
-        descr: 'I enjoy relaxing on the couch especially when there is a carpet on the floor',
-        content: 'There is a contect text. For now I dont know what for it is. Bla bla. I need to create some more powerful projectas to find my lovely jobю Щту ьщку ыутеутсу! Шь зкуеен пщщвю Ш рщзу ыщ!',
-        img: 'https://images.unsplash.com/photo-1655071516487-03bb9267b1f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'
-      },
-      comments: [
-        {
-          name: 'Alex',
-          text: 'I like it!'
-        },
-        {
-          name: 'Olga',
-          text: 'Thank you for your inspiration'
-        }
-      ]
+      post: post.data,
+      comments: postComments
     }
   }
 }
