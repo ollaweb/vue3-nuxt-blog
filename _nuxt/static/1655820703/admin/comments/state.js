@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fvue3-nuxt-blog\u002F_nuxt\u002Fstatic\u002F1655820703",layout:"admin",error:a,state:a,serverRendered:false,routePath:"\u002Fadmin\u002Fcomments",config:{_app:{basePath:"\u002Fvue3-nuxt-blog\u002F",assetsPath:"\u002Fvue3-nuxt-blog\u002F_nuxt\u002F",cdnURL:a}}}}(null));
