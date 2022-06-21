@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/blog/-N5-hflnFwTF8JlKBems", {data:[{post:{content:"🧡",descr:"...like daylight",id:"-N5-hflnFwTF8JlKBems",img:"\u002Fimg\u002Fposts\u002F5.jpg",title:"Good morning!"},comments:[]}],fetch:{},mutations:[]});

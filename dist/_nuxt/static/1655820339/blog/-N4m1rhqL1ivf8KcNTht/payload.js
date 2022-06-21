@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/blog/-N4m1rhqL1ivf8KcNTht", {data:[{post:{content:"What a cozy picture!",descr:"I enjoy relaxing on the couch especially when there is a carpet on the floor",id:"-N4m1rhqL1ivf8KcNTht",img:"\u002Fimg\u002Fposts\u002F1.jpg",title:"Carpet on the floor"},comments:[]}],fetch:{},mutations:[]});
