@@ -19,4 +19,9 @@ export const links = [
       alias: "about",
       url: "/about",
   },
+  {
+    title: "Admin",
+    alias: "admin",
+    url: "/admin",
+},
 ];
