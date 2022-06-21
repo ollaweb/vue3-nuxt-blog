@@ -36,8 +36,14 @@ export default {
     width: 100%;
     max-width: 100%;
     text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
     @media (min-width: 641px) {
       max-width: 48%;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
     @media (min-width: 1028px) {
       max-width: 33%;

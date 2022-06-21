@@ -3,7 +3,9 @@
     <div class="container">
       <h1 class="title">My SSR Blog with Nuxt.js!</h1>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente totam aut inventore commodi voluptates expedita, pariatur ad mollitia laborum.</p>
+      <p>This is my study blog where I learnt how to use Nuxt.js, create admin page, add SEO to the site.</p>
+      <p>You can leave some comments under posts that you like.</p>
+      <p>Enjoy!</p>
     </div>
   </section>
 </template>

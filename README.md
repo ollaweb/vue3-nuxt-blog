@@ -2,6 +2,33 @@
 
 Learning Nuxt.js, creating a SPA with SEO.
 
+[Demo to test my project](https://ollaweb.github.io/vue3-nuxt-blog/)
+
+## Review
+
+![Look at this lovely design](https://github.com/ollaweb/vue3-nuxt-blog/blob/main/Blog.JPG)
+
+## Demonstration
+
+![Demonstration](https://github.com/ollaweb/vue3-nuxt-blog/blob/main/demonstration.gif)
+
+### Description
+
+Study project. Getting data by REST API from Firebase Database.
+Project made by learning Vue 3 [in this course.](https://tocode.ru/courses/vuejs-3-s-nulya-do-rezultata/)
+
+#### In this project:
+
+- using Nuxt.js;
+- SSR with SEO optimization;
+- admin panel;
+- admin panel protection;
+- comments' moderation via admin panel;
+- adding/editting posts via admin panel;
+- working with tokens;
+- using options API;
+- getting data with REST API.
+
 ## Build Setup
 
 ```bash

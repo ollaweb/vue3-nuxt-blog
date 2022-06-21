@@ -1,6 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  router: {
+    base: '/vue3-nuxt-blog/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
