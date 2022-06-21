@@ -51,7 +51,8 @@ export default {
       width: 100%;
       height: 50vh;
       & input {
-        width: 460px;
+        width: 100%;
+        max-width: 460px;
       }
     }
   }

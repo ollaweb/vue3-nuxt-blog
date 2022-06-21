@@ -1,8 +1,10 @@
 <template>
   <div class="wrapper-content">
     <Post :post="post"/>
-    <Comments :comments="comments"/>
-    <NewComment :postId="$route.params.id"/>
+    <client-only>
+      <Comments :comments="comments"/>
+      <NewComment :postId="$route.params.id"/>
+    </client-only>
   </div>
 </template>
 
@@ -18,6 +20,22 @@ export default {
     Post,
     NewComment,
     Comments
+  },
+  head() {
+    let title = this.post.title,
+        descr = this.post.descr,
+        type = 'article',
+        img = `${this.post.img}`
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: descr },
+        { hid: 'og:description', name: 'og:description', content: descr },
+        { hid: 'og:type', name: 'og:type', content: type },
+        { hid: 'og:image', name: 'og:image', content: img }
+      ]
+    }
   },
   async asyncData(context) {
     let [post, comments] = await Promise.all([

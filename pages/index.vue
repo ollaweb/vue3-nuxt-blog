@@ -16,9 +16,18 @@ export default {
     Promo,
     Contacts
   },
-  data() {
+  head() {
+    let title = 'My SSR Blog!',
+        descr = 'My SSR Blog with Nuxt.js!',
+        type = 'site'
     return {
-      posts: []
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: descr },
+        { hid: 'og:description', name: 'og:description', content: descr },
+        { hid: 'og:type', name: 'og:type', content: type }
+      ]
     }
   },
   computed: {
